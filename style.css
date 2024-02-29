@@ -7,6 +7,8 @@ html,body
     background-image: linear-gradient(to top left, #4b0635 0%, #9b1642 110%);
 
     position: relative;
+
+    overflow: auto;
 }
 .main
 {
@@ -81,8 +83,12 @@ html,body
 .div_cross_button:hover
 {
     color: white;
-    background-color: rgb(199, 0, 0);
+    background-color: rgb(157, 0, 0);
     transition: background-color 0.5s;
+}
+.div_cross_button:active
+{
+    background-color:rgb(255, 49, 49) ;
 }
 .color_numbers
 {
@@ -112,12 +118,14 @@ html,body
     
     color: rgb(95, 95, 95);
 }
+.first_color_div
+{
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
+}
 .color_1
 {
     background-color: rgb(155, 155, 255);
-    border-top-left-radius: 22px;
-    border-top-right-radius: 22px;
-
 }
 .color_2
 {
@@ -146,10 +154,13 @@ html,body
 }
 .color_7
 {
-    background-color: rgb(255, 253, 144);  /* #FFFD90  */
+    background-color: rgb(255, 253, 144);  /* #FFFD90  */ 
+
+}
+.last_color_div
+{
     border-bottom-left-radius: 22px;
     border-bottom-right-radius: 22px;  
-    transition: all ease 0.3s;
 }
 .button_generate_random_colors
 {
