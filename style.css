@@ -1,0 +1,171 @@
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+
+    background-image: linear-gradient(to top left, #4b0635 0%, #9b1642 110%);
+
+    position: relative;
+}
+.main
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    display: flex;
+    flex-direction: column;
+
+    
+}
+.div_colors_display
+{
+    
+    width: 380px;
+    height: 710px;
+    background-color: white ;
+    border-radius: 30px;
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    border-width: 5px;
+    border-color: white;
+    padding: 15px;
+
+}
+.div_color
+{
+    background-color: aliceblue;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+
+    position: relative;
+    cursor: pointer;
+
+
+
+}
+.div_color:hover .div_cross_button
+{
+    opacity: 1;
+    /* transition: all ease 0.5s; */
+    transition: opacity 0.5s;
+ 
+}
+.div_cross_button
+{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: black;
+    width: 18px;
+    height: 18px;
+
+    font-weight: 2000;
+    font-size: 25px;
+
+    background-color: rgba(255, 255, 255, 0.665);
+    border-radius: 3px;
+    opacity: 0;
+}
+.div_cross_button:hover
+{
+    color: white;
+    background-color: rgb(199, 0, 0);
+    transition: background-color 0.5s;
+}
+.color_numbers
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+
+    width: 40%;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.5);
+
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.text_hex_vlue
+{
+    font-family: Gilroy;
+    font-size: 20px; 
+    font-weight: 700;
+    letter-spacing: 1px;
+    
+    color: rgb(95, 95, 95);
+}
+.color_1
+{
+    background-color: rgb(155, 155, 255);
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
+
+}
+.color_2
+{
+    background-color: rgb(255, 228, 196);  /* #FFE4C4 */
+
+}
+.color_3
+{
+    background-color: rgb(219, 255, 162);  /* #DBFFA2 */  
+
+}
+.color_4
+{
+    background-color: rgb(196, 247, 255);  /* #C4F7FF */  
+
+}
+.color_5
+{
+    background-color: rgb(255, 196, 252);  /* #FFC4FC  */  
+
+}
+.color_6
+{
+    background-color: rgb(255, 196, 204);  /* #FFC4CC  */
+
+}
+.color_7
+{
+    background-color: rgb(255, 253, 144);  /* #FFFD90  */
+    border-bottom-left-radius: 22px;
+    border-bottom-right-radius: 22px;  
+    transition: all ease 0.3s;
+}
+.button_generate_random_colors
+{
+    margin-top: 20px;
+    border: none;
+    font-size: 30px;
+    font-family: gilroy;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 7px 0px ;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: rgb(255, 196, 0);
+    color: white;
+}
+.button_generate_random_colors:active
+{
+    background-color: rgb(255, 221, 69);
+}
