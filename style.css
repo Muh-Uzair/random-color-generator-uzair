@@ -20,10 +20,25 @@ html,body
     display: flex;
     flex-direction: column;
 
+}
+.div_border
+{
     
+    width: 410px;
+    height: 740px;
+
+    background-color: rgb(255, 255, 255);
+
+    border-radius:38px;
+
+    position: relative;
 }
 .div_colors_display
 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     
     width: 380px;
     height: 710px;
@@ -36,7 +51,7 @@ html,body
 
     border-width: 5px;
     border-color: white;
-    padding: 15px;
+    /* padding: 15px; */
 
 }
 .div_color

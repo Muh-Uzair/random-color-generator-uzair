@@ -13,6 +13,12 @@ export function add_event_listener_function_button_cross(recieved_control_cross_
         // 1 : using event deligation to make an event happen on cross button 
         const cross_btn = event_info_object.target.closest(".div_cross_button") ;
         // console.log(cross_btn)
+        //console.log(cross_btn.classList.value.slice(-1))
+
+        const cross_btn_number = +cross_btn.classList.value.slice(-1)-1
+        // console.log(cross_btn_number)
+
+
 
         // 2 : if user did not clicked on cross button then return 
         if(!cross_btn) return ;
@@ -23,27 +29,38 @@ export function add_event_listener_function_button_cross(recieved_control_cross_
         // console.log(all_div_arr)
 
 
+
         // 4 : removing 1 div from it 
-        all_div_arr.pop() ;
-        let html_markup = ""
-        for(let i = 0 ; i < all_div_arr.length ; i++ )
+        all_div_arr.splice(cross_btn_number,1) ;
+        // console.log(all_div_arr)
+        all_div_arr.forEach((val,i) =>
         {
-            if(i === +all_div_arr.length - 1)
-            {
-                all_div_arr[i].classList.add("last_color_div") ;
-                // console.log(all_div_arr[i])
-            }
+            val.classList=[] ;
+            val.classList.add(`div_color`);
+            val.classList.add(`color_${i+1}`) ;
+            var new_cross_btn =val.querySelector(".div_cross_button") ;
+            new_cross_btn.classList = [] ;
+            new_cross_btn.classList.add("div_cross_button") ;
+            new_cross_btn.classList.add(`cross_button_${i+1}`)
             
-            html_markup += all_div_arr[i].outerHTML;
-        }
-        // console.log(html_markup)
+        })
+        // console.log(" ")
+
+        
+
+
+
+        let html_markup = ""
+        all_div_arr.forEach(val=>
+        {
+            html_markup+=val.outerHTML ;
+        })
+
 
         document.querySelector('.div_colors_display').innerHTML = "" ;
         document.querySelector('.div_colors_display').insertAdjacentHTML("afterbegin" , html_markup)
 
         recieved_control_cross_button_working_function() ;
-
-
     
     })
  

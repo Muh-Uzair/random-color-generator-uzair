@@ -58,6 +58,8 @@ export function display_all_colors_function(recieved_all_colors_arr)
         let hex_color = rgbToHex(val_1, val_2, val_3) ;
         hex_color = hex_color.toUpperCase()
         
+        // console.log(document.querySelector(`.color_${i+1}`))
         document.querySelector(`.color_${i+1} .text_hex_vlue`).textContent = hex_color ;
     }
+    // console.log(" ")
 }
