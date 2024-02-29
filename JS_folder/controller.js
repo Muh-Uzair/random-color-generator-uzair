@@ -10,6 +10,14 @@ import { generate_random_color_values_function } from "./helpers.js";
 
 
 
+
+
+
+
+
+
+
+
 function control_generate_button_working_function()
 {
     // console.log(`click generate button`) ;
@@ -17,10 +25,20 @@ function control_generate_button_working_function()
 
     view.display_all_colors_function(all_color_arr)    
 }
-function control_cross_button_working_function()
+function control_cross_button_working_function(cross_btn_number)
 {
-    // console.log(`cross button clicked`) ;        
+    view_cross_button.removing_colors_function(cross_btn_number);       
 }
+
+
+
+
+
+
+
+
+
+
 
 
 function init()

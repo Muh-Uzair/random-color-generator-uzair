@@ -4,6 +4,13 @@
 import {button_generate,all_color_div} from "../config.js"
 
 
+
+
+
+
+
+
+
 export function add_event_listener_function_button_generate(recieved_control_generate_button_working_function)
 {
     button_generate.addEventListener("click" , 
@@ -13,6 +20,11 @@ export function add_event_listener_function_button_generate(recieved_control_gen
         recieved_control_generate_button_working_function() ;
     })    
 }
+
+
+
+
+
 
 
 
