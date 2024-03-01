@@ -10,22 +10,22 @@ export function add_event_listener_function_button_cross(recieved_control_cross_
     div_colors_display.addEventListener("click" ,
     function(event_info_object)
     {
-             // 1 : using event deligation to make an event happen on cross button 
-     const cross_btn = event_info_object.target.closest(".div_cross_button") ;
-     // console.log(cross_btn)
-     //console.log(cross_btn.classList.value.slice(-1))
-     if(!cross_btn) return ;
+        // 1 : using event deligation to make an event happen on cross button 
+        const cross_btn = event_info_object.target.closest(".div_cross_button") ;
+        console.log(cross_btn)
+        //console.log(cross_btn.classList.value.slice(-1))
+        if(!cross_btn) return ;
 
-     const cross_btn_number = +cross_btn.classList.value.slice(-1) ;
-     if(!cross_btn_number) return ;
-    //  console.log(cross_btn_number)
+        const cross_btn_number = +cross_btn.classList.value.slice(-1) ;
+        if(!cross_btn_number) return ;
+        //  console.log(cross_btn_number)
 
 
 
-     // 2 : if user did not clicked on cross button then return 
+        // 2 : if user did not clicked on cross button then return 
 
-     // console.log(`cross_button_clicked`) ;
-        
+        // console.log(`cross_button_clicked`) ;
+            
         recieved_control_cross_button_working_function(cross_btn_number) ;
     })
  
